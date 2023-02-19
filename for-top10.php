@@ -101,7 +101,7 @@
                   </form>
                 <?php endif ?>
 
-                <?php if (isset($_GET['edittopdata'])){ 
+                <?php if (isset($_GET['edittopdata'])){
                     $id = $_GET['edit_top'];
                     $top_showdata = $conn->query("SELECT * FROM top_cited_articles_table WHERE id='$id'");
                     $top_show = $top_showdata->fetch_array();

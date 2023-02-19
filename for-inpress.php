@@ -1,20 +1,5 @@
 <?php include 'classes/programming.php'; ?>
 <?php  
-  // if (isset($_POST['enter_inpress'])) {
-  //     $data=array(
-  //     'inpress_title' => trim($_POST['inpress_title']),
-  //     'inp_co_authors_names' => trim($_POST['inp_co_authors_names']),
-  //     'inpress_abstract' => trim($_POST['inpress_abstract']),
-  //     'inpress_keywords' => trim($_POST['inpress_keywords']),
-  //     'datetime' => date("Y-m-d")
-  //   );
-  //   $in_insert=$fun->insert_data('inpress_table', $data);
-  //   if ($in_insert) {
-  //     echo "<script>window.location='for-inpress.php?in_mes=Sucessfully Data Entered'</script>";
-  //   }else{
-  //     echo "<script>window.location='for-inpress.php?in_mes=Data Not Entered'</script>";
-  //   }
-  // }
 
   if (isset($_POST['enter_inpress'])) {
     $m_name = $_POST['inpress_title'];

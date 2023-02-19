@@ -72,31 +72,19 @@ if (isset($_POST['save'])) {
                                      <th>
                                       Volume
                                     </th>
-                                    <th>
-                                      Edit
-                                    </th>
-                                    <th>
-                                      Delete
-                                    </th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <?php $i=1; foreach ($fun->fetch_data("vvolume") as $value): ?>
                                   <tr>
                                     <td class="py-1">
-                                      <?php   echo $i++ ?>
+                                      <?php echo $i++ ?>
                                     </td>
                                     <td>
                                       <?php echo $fun->one_value("yyear",array('id' => $value['yyear_id']))['yearNo'] ?>
                                     </td>
                                     <td>
                                       <?php echo $value['volumeNo'] ?>
-                                    </td>
-                                    <td>
-                                      Edit Button
-                                    </td>
-                                    <td>
-                                      Article Delete
                                     </td>
                                   </tr>
                                   <?php endforeach ?>

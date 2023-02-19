@@ -17,12 +17,6 @@
               <i class="mdi mdi-view-headline menu-icon"></i>
               <span class="menu-title">For In-Press Articles</span>
             </a>
-          </li>          
-          <li class="nav-item">
-            <a class="nav-link" href="for-archive-heading.php">
-              <i class="mdi mdi-view-headline menu-icon"></i>
-              <span class="menu-title">For Archive Heading</span>
-            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="year.php">

@@ -46,23 +46,32 @@
                       <div class="d-flex flex-wrap justify-content-xl-between">
                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                           <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
+                          <?php $topshow = $conn->query("SELECT * FROM top_cited_articles_table"); ?>
                           <div class="d-flex flex-column justify-content-around">
                             <small class="mb-1 text-muted">Top Citation Articles</small>
-                            <h5 class="mr-2 mb-0">0</h5>
+                            <h5 class="mr-2 mb-0">
+                              <?php echo mysqli_num_rows($topshow); ?>
+                            </h5>
                           </div>
                         </div>
                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                           <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
+                          <?php $inpshow = $conn->query("SELECT * FROM inpress_table") ?>
                           <div class="d-flex flex-column justify-content-around">
                             <small class="mb-1 text-muted">InPress Articles</small>
-                            <h5 class="mr-2 mb-0">0</h5>
+                            <h5 class="mr-2 mb-0">
+                              <?php echo mysqli_num_rows($inpshow); ?>
+                            </h5>
                           </div>
                         </div>
                         <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                           <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
+                          <?php $archshow=$conn->query("SELECT * FROM archive_table") ?>
                           <div class="d-flex flex-column justify-content-around">
                             <small class="mb-1 text-muted">Archive Articles</small>
-                            <h5 class="mr-2 mb-0">0</h5>
+                            <h5 class="mr-2 mb-0">
+                              <?php echo mysqli_num_rows($archshow); ?>
+                            </h5>
                           </div>
                         </div>
                       </div>
@@ -83,4 +92,3 @@
   <script src="js/dashboard.js"></script>>
 </body>
 </html>
-

@@ -7,6 +7,11 @@ if (isset($_POST['save'])) {
   }
 }
  ?>
+ <?php 
+      if (isset($_POST['ycancel'])) {
+        echo "<script>window.location='year.php'</script>";
+      }
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,8 +47,8 @@ if (isset($_POST['save'])) {
                         </select>
                       </div>
                     </div>             
-                    <button type="submit" name="save" class="btn btn-primary mr-2">Submit</button>
-                    <button class="btn btn-light">Cancel</button>
+                    <button type="submit" name="save" class="btn btn-primary mr-2 mt-3">Submit</button>
+                    <button name="ycancel" class="btn btn-light mt-3">Cancel</button>
                   </form>
                 </div>
               </div>
@@ -67,12 +72,6 @@ if (isset($_POST['save'])) {
                                     <th>
                                       Year
                                     </th>
-                                    <th>
-                                      Edit
-                                    </th>
-                                    <th>
-                                      Delete
-                                    </th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -83,12 +82,6 @@ if (isset($_POST['save'])) {
                                     </td>
                                     <td>
                                       <?php echo $value['yearNo'] ?>
-                                    </td>
-                                    <td>
-                                      Edit Button
-                                    </td>
-                                    <td>
-                                      Article Delete
                                     </td>
                                   </tr>
                                   <?php endforeach ?>
